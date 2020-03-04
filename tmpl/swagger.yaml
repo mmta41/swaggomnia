@@ -33,12 +33,14 @@ paths:
         required: true
       {{- end }}
       {{- range $p, $param := $resource.Headers}}
+      {{if $param.IsAllowed }}
       - name: "{{ $param.Name }}"
         in: "header"
         schema:
           type: "string"
         description: ""
         required: true
+      {{- end }}
       {{- end }}
       {{- end }}
       responses:
