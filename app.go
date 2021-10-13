@@ -14,13 +14,13 @@ func main() {
 	app.Usage = "Insomnia to Swagger converter"
 	app.Version = "1.1.0"
 	app.Compiled = time.Now()
-	app.Authors = []*cli.Author{
-		&cli.Author{
+	app.Authors = []cli.Author{
+		{
 			Name:  "Nick Wallace",
 			Email: "nwallace@fyberstudios.com",
 		},
 	}
-	app.Commands = []*cli.Command{
+	app.Commands = []cli.Command{
 		{
 			Name:    "generate",
 			Aliases: []string{"g"},
